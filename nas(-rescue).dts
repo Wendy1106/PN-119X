@@ -1,0 +1,46 @@
+#########################################################################################################################
+    update_fw{
+	compatiable = "Realtek,update_fw";
+	INFO_led  = <&rtk_iso_gpio 2 0 0>;
+	ERR_led = <&rtk_iso_gpio 3 0 0>;
+	USB_led = <&rtk_iso_gpio 4 0 0>;
+	PWR_led = <&rtk_iso_gpio 5 0 0>;
+	EXT_USB3_pwr =<&rtk_misc_gpio 39 1 0>;
+    };
+#########################################################################################################################
+	hdd_pwr {
+		compatiable = "Reatek,hdd_pwr";
+		detect_hdd1_gpio = <&rtk_iso_gpio 13 0 0>;
+		detect_hdd2_gpio = <&rtk_iso_gpio 7 0 0>;
+		detect_hdd3_gpio = <&rtk_misc_gpio 50 0 0>;
+		detect_hdd4_gpio = <&rtk_misc_gpio 8 0 0>;
+
+		power_supply_hdd1_gpio = <&rtk_misc_gpio 49 0 0>;
+		power_supply_hdd2_gpio = <&rtk_misc_gpio 59 0 0>;
+		power_supply_hdd3_gpio = <&rtk_misc_gpio 57 0 0>;
+		power_supply_hdd4_gpio = <&rtk_misc_gpio 56 0 0>;
+
+		hdd_asm_rst_1 = <&rtk_misc_gpio 58 0 0>;
+		hdd_asm_rst_2 = <&rtk_misc_gpio 53 0 0>;
+		hdd_asm_rst_3 = <&rtk_misc_gpio 54 0 0>;
+		hdd_asm_rst_4 = <&rtk_misc_gpio 55 0 0>;
+		
+		//ERR_led = <&rtk_iso_gpio 3 0 0>;
+	};
+	pwr_key {
+		compatiable = "Realtek,pwr_key";
+		pwrButton = <&rtk_iso_gpio 11 0 0 >;
+		pwrLED = <&rtk_iso_gpio 5 0 0>;
+		pwrCPUOFF = <&rtk_iso_gpio 14 0 0>;
+		EXT_USB3_pwr =<&rtk_misc_gpio 39 1 0>;
+		USB_led = <&rtk_iso_gpio 4 0 0>;
+		SYS_led = <&rtk_iso_gpio 3 0 0>;
+	};
+	onekcp {
+		compatiable = "Realtek,onekcp";
+		FUNC_sw = <&rtk_iso_gpio 12 0 0>;
+		//FUNC_sw = <&rtk_misc_gpio 4 0 0>;
+		INFO_led  = <&rtk_iso_gpio 2 0 0>;
+	};
+	#########################################################################################################################
+	
