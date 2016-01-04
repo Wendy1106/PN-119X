@@ -5,7 +5,7 @@ typedef enum {
         BOOT_MANUAL_MODE,
         BOOT_QC_VERIFY_MODE,
         BOOT_FLASH_WRITER_MODE,
-        /regist new method
+        //regist new method
         BOOT_TFTP_KERN_MODE,
         //regist new method
         BOOT_TFTP_UBOT_MODE,
