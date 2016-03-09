@@ -1,0 +1,10 @@
+ifneq ($(KERNELRELEASE),)
+	obj-m:= ds18b20.o
+else
+	KERNELDIR ?= /home/danza/DHC/workspace/v1.0.1.2_mele/linux-kernel
+	PWD :=$(shell pwd)
+default:
+	$(MAKE) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -C $(KERNELDIR) M=$(PWD) modules
+clean:
+	rm -rf *.o *.mod.c *.mod.o *.ko *.cmd modules.order Module.symvers .tmp_versions
+endif
